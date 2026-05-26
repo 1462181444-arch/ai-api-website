@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尚书科技 - AI 开放平台</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+        }
+        .hero { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center; 
+        }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero p { 
+            font-size: 20px; 
+            opacity: 0.9; 
+            margin-bottom: 40px; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+        .btn { 
+            display: inline-block; 
+            padding: 15px 40px; 
+            background: white; 
+            color: #667eea; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-size: 18px; 
+            font-weight: 600; 
+            margin: 10px; 
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .btn-primary { 
+            background: #10b981; 
+            color: white; 
+        }
+        .section { 
+            padding: 60px 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .section h2 { 
+            text-align: center; 
+            font-size: 32px; 
+            margin-bottom: 40px;
+            color: #1e293b;
+        }
+        .features { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 30px; 
+        }
+        .feature { 
+            text-align: center; 
+            padding: 30px; 
+            border-radius: 12px; 
+            background: #f8fafc; 
+            transition: all 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .feature .icon { font-size: 48px; margin-bottom: 20px; }
+        .feature h3 { margin-bottom: 10px; color: #1e293b; }
+        .feature p { color: #64748b; }
+        
+        .pricing { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+        }
+        .price-card { 
+            border: 2px solid #e2e8f0; 
+            border-radius: 12px; 
+            padding: 30px; 
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .price-card.popular { 
+            border-color: #10b981; 
+            transform: scale(1.02); 
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+        .price-card h3 { font-size: 24px; margin-bottom: 10px; color: #1e293b; }
+        .price { font-size: 48px; font-weight: 700; color: #1e293b; }
+        .price span { font-size: 16px; color: #64748b; }
+        .price-card .desc { color: #64748b; margin-bottom: 20px; }
+        .price-card ul { list-style: none; margin: 30px 0; text-align: left; }
+        .price-card li { padding: 8px 0; color: #475569; }
+        .price-card li::before { content: "✓ "; color: #10b981; font-weight: bold; margin-right: 8px; }
+        
+        .footer { 
+            background: #1e293b; 
+            color: white; 
+            padding: 40px 20px; 
+            text-align: center; 
+        }
+        .footer p { opacity: 0.8; }
+        
+        .models {
+            background: #f8fafc;
+        }
+        .model-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .model-tag {
+            background: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            color: #475569;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>尚书科技 AI 开放平台</h1>
+        <p>稳定、便宜、好用的大模型 API 中转服务</p>
+        <a href="https://api.aisscoper.com/register" class="btn btn-primary">立即注册</a>
+        <a href="#pricing" class="btn">查看价格</a>
+    </div>
+
+    <div class="section">
+        <h2>为什么选择我们</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="icon">🚀</div>
+                <h3>极速响应</h3>
+                <p>国内 BGP 多线接入，平均延迟 < 100ms，高并发不卡顿</p>
+            </div>
+            <div class="feature">
+                <div class="icon">💰</div>
+                <h3>价格透明</h3>
+                <p>无隐藏费用，输入输出分别计费，用量实时可查</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🔒</div>
+                <h3>安全可靠</h3>
+                <p>企业级加密，密钥独立管理，7×24 技术支持</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section models">
+        <h2>支持模型</h2>
+        <div class="model-tags">
+            <span class="model-tag">GPT-4</span>
+            <span class="model-tag">GPT-3.5</span>
+            <span class="model-tag">Claude 3</span>
+            <span class="model-tag">DeepSeek</span>
+            <span class="model-tag">文心一言</span>
+            <span class="model-tag">通义千问</span>
+            <span class="model-tag">豆包</span>
+            <span class="model-tag">GLM</span>
+            <span class="model-tag">Gemini</span>
+        </div>
+    </div>
+
+    <div class="section" id="pricing">
+        <h2>价格套餐</h2>
+        <div class="pricing">
+            <div class="price-card">
+                <h3>🟢 体验版</h3>
+                <div class="price">9.9<span> 元</span></div>
+                <p class="desc">100 万 Token</p>
+                <ul>
+                    <li>支持 15+ 主流模型</li>
+                    <li>30 并发请求</li>
+                    <li>有效期 1 年</li>
+                    <li>邮件技术支持</li>
+                </ul>
+                <a href="https://api.aisscoper.com/register" class="btn btn-primary" style="display:block;">立即开通</a>
+            </div>
+            <div class="price-card popular">
+                <h3>🟡 标准版</h3>
+                <div class="price">99<span> 元</span></div>
+                <p class="desc">1200 万 Token</p>
+                <ul>
+                    <li>支持 15+ 主流模型</li>
+                    <li>100 并发请求</li>
+                    <li>有效期 1 年</li>
+                    <li>微信专属客服</li>
+                    <li>优先高速通道</li>
+                </ul>
+                <a href="https://api.aisscoper.com/register" class="btn btn-primary" style="display:block;">立即开通</a>
+            </div>
+            <div class="price-card">
+                <h3>🔴 专业版</h3>
+                <div class="price">999<span> 元</span></div>
+                <p class="desc">1.5 亿 Token</p>
+                <ul>
+                    <li>支持全部 25+ 模型</li>
+                    <li>500 并发请求</li>
+                    <li>有效期永久</li>
+                    <li>7×24 专属技术支持</li>
+                </ul>
+                <a href="https://api.aisscoper.com/register" class="btn btn-primary" style="display:block;">立即开通</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 陕西尚书科品商贸有限公司 · 客服微信：shangshu_ai</p>
+    </div>
+</body>
+</html>
